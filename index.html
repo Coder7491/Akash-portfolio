@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Akash Kumar - Portfolio | B.Tech Computer Science & Engineering, Cyber Security, CCTV Surveillance & Server Management Specialist based in Delhi, India.">
+  <meta name="keywords" content="Akash Kumar, Portfolio, IT Systems, Cyber Security, CCTV Control Room Operator, Server Management, OpenCV, Python Developer, Delhi">
+  <meta name="author" content="Akash Kumar">
+  <title>Akash Kumar | IT Systems, Cyber Security & Computer Vision</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body class="dark-mode">
+
+  <!-- Ambient Light Glow Mesh in Background -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+  <div class="cyber-bg-grid"></div>
+  <canvas id="ambientMeshCanvas"></canvas>
+
+  <!-- Floating Modern Header / Navbar -->
+  <header class="site-header" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand">
+        <div class="brand-avatar-wrap">
+          <img src="profile.jpg?v=2" alt="Akash Kumar" class="brand-avatar-img">
+          <span class="avatar-status-dot"></span>
+        </div>
+        <div class="brand-info">
+          <span class="brand-name">Akash Kumar</span>
+          <span class="brand-role">IT & Cyber Systems</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-item">About</a>
+        <a href="#skills" class="nav-item">Skills</a>
+        <a href="#experience" class="nav-item">Experience</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#education" class="nav-item">Education</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary nav-cta">
+          <span>Get in Touch</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button class="menu-toggle" id="menuToggleBtn" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-layout">
+        <div class="hero-text-col">
+          <!-- Availability Badge -->
+          <div class="status-badge">
+            <span class="pulse-indicator"></span>
+            <span>Available for IT Operations & Cyber Roles</span>
+          </div>
+
+          <h1 class="hero-heading">
+            Building Resilient <span class="gradient-text">IT Systems</span>, Cyber Defense & Intelligent Vision.
+          </h1>
+
+          <div class="hero-role-rotator">
+            <span class="rotator-prefix">Expertise in</span>
+            <span class="rotator-text" id="roleRotator">CCTV Surveillance Operations</span>
+            <span class="rotator-cursor">|</span>
+          </div>
+
+          <p class="hero-description">
+            I'm <strong>Akash Kumar</strong>, a <strong>B.Tech Computer Science & Engineering</strong> student with proven hands-on enterprise IT experience from Myntra FC, specialized in server administration, network troubleshooting, and OpenCV computer vision pipelines.
+          </p>
+
+          <!-- Contact Quick Chips -->
+          <div class="hero-quick-meta">
+            <div class="meta-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Delhi, India</span>
+            </div>
+            <a href="mailto:akash7491800@gmail.com" class="meta-item meta-link">
+              <i class="fa-solid fa-envelope"></i>
+              <span>akash7491800@gmail.com</span>
+            </a>
+            <a href="tel:+917491800797" class="meta-item meta-link">
+              <i class="fa-solid fa-phone"></i>
+              <span>+91 7491800797</span>
+            </a>
+          </div>
+
+          <!-- Hero Action CTAs -->
+          <div class="hero-cta-group">
+            <a href="#experience" class="btn btn-primary">
+              <i class="fa-solid fa-briefcase"></i>
+              <span>View Experience</span>
+            </a>
+            <a href="#projects" class="btn btn-secondary">
+              <i class="fa-solid fa-eye"></i>
+              <span>Explore Projects</span>
+            </a>
+            <button class="btn btn-outline" id="downloadCvBtn">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>Save Resume (PDF)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- HERO BENTO VISUAL CARD -->
+        <div class="hero-card-col">
+          <div class="hero-bento-card" id="bentoCard3D">
+            <!-- Hero Photo Showcase with Glowing Frame & Badges -->
+            <div class="hero-photo-showcase">
+              <div class="photo-frame">
+                <img src="profile.jpg?v=2" alt="Akash Kumar - IT Systems & Cyber Security Specialist" class="hero-profile-img">
+                <div class="photo-glow-border"></div>
+                <div class="photo-gradient-overlay"></div>
+                
+                <!-- Floating Badges over Photo -->
+                <div class="photo-badge badge-top-right">
+                  <span class="status-live-dot"></span>
+                  <span>Available for Hire</span>
+                </div>
+                <div class="photo-badge badge-bottom-left">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  <span>Ex-CRO @ Myntra FC</span>
+                </div>
+                <div class="photo-badge badge-bottom-right">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <span>B.Tech CSE</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card Header -->
+            <div class="bento-card-header">
+              <div class="user-profile-row">
+                <div>
+                  <h3 class="user-name">Akash Kumar</h3>
+                  <p class="user-sub">B.Tech CSE • Delhi, India</p>
+                </div>
+              </div>
+              <span class="uptime-badge"><i class="fa-solid fa-check"></i> 99.9% Reliable</span>
+            </div>
+
+            <!-- Live Telemetry Widget -->
+            <div class="telemetry-widget">
+              <div class="widget-row">
+                <span class="widget-label"><i class="fa-solid fa-shield-halved"></i> Past Role</span>
+                <span class="widget-value">CRO @ Myntra FC</span>
+              </div>
+              <div class="widget-row">
+                <span class="widget-label"><i class="fa-solid fa-microchip"></i> Certification</span>
+                <span class="widget-value">IoT & ML (GITAM 2026)</span>
+              </div>
+              <div class="widget-row">
+                <span class="widget-label"><i class="fa-solid fa-code"></i> Core Languages</span>
+                <span class="widget-value highlight-blue">Python, C, C++, SQL</span>
+              </div>
+            </div>
+
+            <!-- Interactive Hand Gesture Live Mini-Preview -->
+            <div class="bento-preview-box">
+              <div class="preview-header">
+                <span class="preview-title"><i class="fa-solid fa-video"></i> OpenCV Project Preview</span>
+                <span class="live-tag">● LIVE INFERENCE</span>
+              </div>
+              <div class="gesture-demo-card">
+                <div class="gesture-icon-pulse">
+                  <i class="fa-solid fa-hand" id="miniGestureIcon"></i>
+                </div>
+                <div class="gesture-details">
+                  <span class="g-state" id="miniGestureLabel">Gesture: Open Palm Detected</span>
+                  <span class="g-conf">Accuracy: 95.8% • Frame: 30 FPS</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bento Footer Metrics -->
+            <div class="bento-metric-pills">
+              <div class="metric-pill">
+                <strong>100%</strong>
+                <span>Feed Uptime</span>
+              </div>
+              <div class="metric-pill">
+                <strong>&lt; 3 Min</strong>
+                <span>Response Time</span>
+              </div>
+              <div class="metric-pill">
+                <strong>2024-28</strong>
+                <span>B.Tech Batch</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METRICS TICKER STRIP -->
+    <section class="ticker-strip">
+      <div class="container">
+        <div class="stats-row">
+          <div class="stat-box">
+            <span class="stat-num">B.Tech</span>
+            <span class="stat-desc">Computer Science & Engineering</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <span class="stat-num">Myntra FC</span>
+            <span class="stat-desc">Control Room Surveillance Experience</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <span class="stat-num">OpenCV</span>
+            <span class="stat-desc">AI Hand Gesture Analyzer</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <span class="stat-num">GITAM</span>
+            <span class="stat-desc">IoT, ML & Data Analytics Certified</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION (BENTO ARCHITECTURE) -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Profile Overview</span>
+          <h2 class="section-title">Career Objective & <span class="gradient-text">Core Value</span></h2>
+          <p class="section-subtitle">Dedicated to maximizing IT system uptime, operational safety, and engineering smart software solutions.</p>
+        </div>
+
+        <div class="about-bento-grid">
+          <!-- Main Statement Card -->
+          <div class="bento-card bento-span-2">
+            <div class="bento-icon-title">
+              <div class="bento-icon"><i class="fa-solid fa-bullseye"></i></div>
+              <h3>Career Objective</h3>
+            </div>
+            <p class="objective-statement">
+              "Motivated <strong>B.Tech (Computer Science & Engineering)</strong> student with hands-on IT experience and a working foundation in <strong>cyber security</strong> and <strong>server management</strong>. Seeking an entry-level IT role to apply technical knowledge, support business operations, and grow within a dynamic organization."
+            </p>
+            <div class="target-roles-row">
+              <span class="target-title">Target Roles:</span>
+              <span class="role-chip">IT Systems Trainee</span>
+              <span class="role-chip">Network / Server Admin</span>
+              <span class="role-chip">Surveillance & SOC Analyst</span>
+              <span class="role-chip">Junior Python Dev</span>
+            </div>
+          </div>
+
+          <!-- Quick Identity Card -->
+          <div class="bento-card quick-profile-card">
+            <div class="quick-profile-header">
+              <div class="quick-avatar-wrap">
+                <img src="profile.jpg?v=2" alt="Akash Kumar" class="quick-avatar-img">
+                <span class="quick-status-online"></span>
+              </div>
+              <div class="quick-profile-title">
+                <h3 class="quick-name">Akash Kumar</h3>
+                <span class="quick-role">IT & Cyber Systems Specialist</span>
+              </div>
+            </div>
+            <ul class="quick-info-list">
+              <li>
+                <span class="info-label">Base Location</span>
+                <span class="info-val">Delhi, India</span>
+              </li>
+              <li>
+                <span class="info-label">College</span>
+                <span class="info-val">Ganga Institute of Tech</span>
+              </li>
+              <li>
+                <span class="info-label">Availability</span>
+                <span class="info-val highlight-green">Immediate Joiner</span>
+              </li>
+              <li>
+                <span class="info-label">Languages</span>
+                <span class="info-val highlight-blue">Python, C, C++, SQL</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Work Ethic Pillar 1 -->
+          <div class="bento-card feature-card">
+            <div class="bento-icon"><i class="fa-solid fa-shield-virus"></i></div>
+            <h4>Security First</h4>
+            <p>Rigorous protocols for surveillance monitoring, hardware auditing, and proactive vulnerability awareness.</p>
+          </div>
+
+          <!-- Work Ethic Pillar 2 -->
+          <div class="bento-card feature-card">
+            <div class="bento-icon"><i class="fa-solid fa-server"></i></div>
+            <h4>Infrastructure Uptime</h4>
+            <p>Solid troubleshooting principles across DVR/NVR servers, LAN routing, PoE switches, and system services.</p>
+          </div>
+
+          <!-- Work Ethic Pillar 3 -->
+          <div class="bento-card feature-card">
+            <div class="bento-icon"><i class="fa-solid fa-brain"></i></div>
+            <h4>Computer Vision & AI</h4>
+            <p>Practical application of OpenCV and Python for automated video frame analysis, gesture detection, and reporting.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Technical Competencies</span>
+          <h2 class="section-title">Skills & <span class="gradient-text">Capabilities</span></h2>
+          <p class="section-subtitle">Proficiencies acquired through hands-on industry operations, academic rigor, and project implementation.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Card 1: Cyber Security -->
+          <div class="skill-modern-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-circle blue">
+                <i class="fa-solid fa-user-shield"></i>
+              </div>
+              <span class="skill-category-tag">Security</span>
+            </div>
+            <h3 class="skill-title">Cyber Security</h3>
+            <p class="skill-summary">
+              Understanding security frameworks, perimeter access control, threat mitigation, system hardening, and incident response procedures.
+            </p>
+            <div class="skill-pills">
+              <span>Access Control</span>
+              <span>Incident Response</span>
+              <span>Log Auditing</span>
+              <span>Network Defense</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 2: CCTV Monitoring -->
+          <div class="skill-modern-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-circle violet">
+                <i class="fa-solid fa-video"></i>
+              </div>
+              <span class="skill-category-tag">Surveillance</span>
+            </div>
+            <h3 class="skill-title">CCTV Monitoring & Surveillance</h3>
+            <p class="skill-summary">
+              Multi-channel live camera surveillance, forensic video review, DVR/NVR cluster administration, and high-priority escalation.
+            </p>
+            <div class="skill-pills">
+              <span>DVR / NVR Clusters</span>
+              <span>Live Multi-Feed</span>
+              <span>Loss Prevention</span>
+              <span>Shift Logging</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 3: Server Management -->
+          <div class="skill-modern-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-circle emerald">
+                <i class="fa-solid fa-server"></i>
+              </div>
+              <span class="skill-category-tag">Infrastructure</span>
+            </div>
+            <h3 class="skill-title">Server Management</h3>
+            <p class="skill-summary">
+              Ensuring continuous server health, monitoring resource allocation (CPU/RAM/Disk), managing service restarts, and verifying system backups.
+            </p>
+            <div class="skill-pills">
+              <span>Server Maintenance</span>
+              <span>Uptime Monitoring</span>
+              <span>Storage Checks</span>
+              <span>System Diagnostics</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 4: Hardware & Network Troubleshooting -->
+          <div class="skill-modern-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-circle amber">
+                <i class="fa-solid fa-network-wired"></i>
+              </div>
+              <span class="skill-category-tag">Hardware & Net</span>
+            </div>
+            <h3 class="skill-title">Hardware & Network Troubleshooting</h3>
+            <p class="skill-summary">
+              LAN configuration, Ethernet crimping, IP routing checks, PoE network switch diagnosis, and rapid remediation of peripheral downtime.
+            </p>
+            <div class="skill-pills">
+              <span>LAN / IP Setup</span>
+              <span>PoE Switches</span>
+              <span>Cable Crimping</span>
+              <span>Fault Isolation</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 5: Image Processing (OpenCV) -->
+          <div class="skill-modern-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-circle indigo">
+                <i class="fa-solid fa-eye"></i>
+              </div>
+              <span class="skill-category-tag">Computer Vision</span>
+            </div>
+            <h3 class="skill-title">Image Processing (OpenCV)</h3>
+            <p class="skill-summary">
+              Video stream capture, contour detection, morphological filtering, convex hull feature mapping, and real-time gesture classification.
+            </p>
+            <div class="skill-pills">
+              <span>OpenCV</span>
+              <span>Contour Analysis</span>
+              <span>Thresholding</span>
+              <span>Real-time Detection</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 6: Languages Known -->
+          <div class="skill-modern-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-circle rose">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <span class="skill-category-tag">Programming</span>
+            </div>
+            <h3 class="skill-title">Languages Known</h3>
+            <p class="skill-summary">
+              Core programming and database scripting for building automation scripts, algorithmic logic, and relational data management.
+            </p>
+            <div class="skill-pills">
+              <span class="highlight">Python</span>
+              <span class="highlight">C</span>
+              <span class="highlight">C++</span>
+              <span class="highlight">SQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE SECTION -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Work History</span>
+          <h2 class="section-title">Industry <span class="gradient-text">Experience</span></h2>
+          <p class="section-subtitle">Real-world operational expertise safeguarding massive e-commerce logistics centers.</p>
+        </div>
+
+        <div class="experience-card-wrapper">
+          <div class="experience-card">
+            <div class="exp-header">
+              <div class="exp-company-group">
+                <div class="exp-logo-box">
+                  <span>M</span>
+                </div>
+                <div>
+                  <h3 class="exp-role">CRO (CCTV Control Room Operator)</h3>
+                  <div class="exp-company">Myntra <span class="dot">•</span> Bilaspur Fulfillment Center (FC)</div>
+                </div>
+              </div>
+              <div class="exp-badge">
+                <i class="fa-regular fa-calendar"></i>
+                <span>June 2025 – Nov 2025</span>
+              </div>
+            </div>
+
+            <div class="exp-summary-quote">
+              <i class="fa-solid fa-quote-left"></i>
+              Responsible for 24/7 central control room surveillance operations, NVR server uptime, and coordinating swift ground emergency response across one of Myntra's largest fulfillment centers.
+            </div>
+
+            <div class="exp-duties-grid">
+              <div class="duty-card">
+                <div class="duty-icon"><i class="fa-solid fa-desktop"></i></div>
+                <div class="duty-content">
+                  <h4>Live Multi-Channel Surveillance</h4>
+                  <p>Monitored live CCTV feeds covering sorting conveyors, dispatch bays, inventory vaults, and employee checkpoints to guarantee complete perimeter safety and smooth operations.</p>
+                </div>
+              </div>
+
+              <div class="duty-card">
+                <div class="duty-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div class="duty-content">
+                  <h4>Incident Flagging & Forensic Review</h4>
+                  <p>Thoroughly reviewed recorded footage to investigate discrepancies, flagged irregular activities or safety violations, and delivered evidence dossiers to management.</p>
+                </div>
+              </div>
+
+              <div class="duty-card">
+                <div class="duty-icon"><i class="fa-solid fa-server"></i></div>
+                <div class="duty-content">
+                  <h4>DVR/NVR Systems Maintenance</h4>
+                  <p>Maintained DVR/NVR cluster uptime, monitored camera feed health, diagnosed network drops, and resolved camera hardware/PoE issues promptly.</p>
+                </div>
+              </div>
+
+              <div class="duty-card">
+                <div class="duty-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                <div class="duty-content">
+                  <h4>Shift Logging & Incident Reporting</h4>
+                  <p>Maintained meticulous shift logs, equipment checklists, and formal incident reports strictly complying with enterprise security standards.</p>
+                </div>
+              </div>
+
+              <div class="duty-card full-width">
+                <div class="duty-icon"><i class="fa-solid fa-walkie-talkie"></i></div>
+                <div class="duty-content">
+                  <h4>Ground Team Coordination & Rapid Response</h4>
+                  <p>Coordinated directly with on-ground marshals, quick reaction teams (QRT), and warehouse leadership to address emergencies, unauthorized entries, and technical faults in real time.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-footer-tags">
+              <span class="exp-tag">CCTV Surveillance</span>
+              <span class="exp-tag">NVR/DVR Management</span>
+              <span class="exp-tag">Network Diagnostics</span>
+              <span class="exp-tag">Control Room SOPs</span>
+              <span class="exp-tag">Incident Response</span>
+              <span class="exp-tag">Shift Management</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">Engineering <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">Bridging computer vision algorithms with surveillance and IT automation.</p>
+        </div>
+
+        <div class="featured-project-card">
+          <div class="project-content-side">
+            <div class="project-tag-row">
+              <span class="badge-featured">FLAGSHIP PROJECT</span>
+              <span class="badge-tech"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="badge-tech"><i class="fa-solid fa-eye"></i> OpenCV</span>
+            </div>
+
+            <h3 class="project-main-title">Hand Gesture Analyzer (CCTV Footage)</h3>
+            <p class="project-overview">
+              An intelligent computer vision system that ingests video frames from CCTV surveillance footage to detect, analyze, and classify human hand gestures in real time.
+            </p>
+
+            <div class="project-highlights-list">
+              <div class="highlight-item">
+                <div class="item-icon"><i class="fa-solid fa-check"></i></div>
+                <div class="item-text">
+                  <strong>Video Frame Processing:</strong> Implemented Python and OpenCV routines for frame extraction, Gaussian blurring, background subtraction, and Otsu thresholding.
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="item-icon"><i class="fa-solid fa-check"></i></div>
+                <div class="item-text">
+                  <strong>Contour & Convex Hull Extraction:</strong> Utilized morphological filters and convexity defects to measure angles between fingers and recognize predefined gestures.
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="item-icon"><i class="fa-solid fa-check"></i></div>
+                <div class="item-text">
+                  <strong>Security Event Triggering:</strong> Designed classification logic capable of identifying distress or clearance signals to trigger instant automated notifications.
+                </div>
+              </div>
+            </div>
+
+            <div class="project-btn-group">
+              <button class="btn btn-primary" id="openDemoBtn">
+                <i class="fa-solid fa-play"></i>
+                <span>Interactive Gesture Demo</span>
+              </button>
+              <button class="btn btn-secondary" id="openCodeSnippetBtn">
+                <i class="fa-solid fa-code"></i>
+                <span>View Python Logic</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Project Interactive Mockup Visual -->
+          <div class="project-visual-side">
+            <div class="modern-screen-mockup">
+              <div class="mockup-header">
+                <div class="header-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <span class="mockup-title">CCTV_GESTURE_VISION // INFERENCE</span>
+                <span class="status-rec">● ACTIVE</span>
+              </div>
+
+              <div class="mockup-screen-body">
+                <!-- Interactive Canvas Gesture Simulation -->
+                <canvas id="interactiveGestureCanvas" width="480" height="280"></canvas>
+                
+                <div class="mockup-overlay-controls">
+                  <div class="gesture-info-pill" id="liveGestureTag">
+                    <span class="g-name">OPEN PALM</span>
+                    <span class="g-score">CONF: 96.2%</span>
+                  </div>
+                  <button class="btn-micro" id="cycleDemoBtn" title="Test next hand gesture">
+                    <i class="fa-solid fa-shuffle"></i> Test Next Gesture
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Projects Grid -->
+        <div class="sub-projects-grid">
+          <div class="sub-project-card">
+            <div class="sub-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <div class="sub-details">
+              <h4>IP Camera & NVR Heartbeat Monitor</h4>
+              <p>Python socket script that periodically pings CCTV subnet IPs, verifies RTSP stream latency, and logs packet loss incidents.</p>
+              <div class="sub-tags">
+                <span>Python</span><span>Sockets</span><span>Ping Telemetry</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sub-project-card">
+            <div class="sub-icon"><i class="fa-solid fa-database"></i></div>
+            <div class="sub-details">
+              <h4>Control Room Incident Database</h4>
+              <p>Relational SQL database schema modeled for logging shift incident tickets, patrol checkpoints, and equipment repair history.</p>
+              <div class="sub-tags">
+                <span>SQL</span><span>Schema Design</span><span>Incident Auditing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS SECTION -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Academic Credentials</span>
+          <h2 class="section-title">Education & <span class="gradient-text">Certifications</span></h2>
+          <p class="section-subtitle">Academic foundations, high school milestones, and specialized tech training.</p>
+        </div>
+
+        <div class="education-grid">
+          <!-- Column 1: Academic Degrees -->
+          <div class="edu-col">
+            <div class="col-heading">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <h3>Academic Education</h3>
+            </div>
+
+            <!-- College -->
+            <div class="modern-edu-card featured-degree">
+              <div class="edu-timeline">Sept 2024 – Present</div>
+              <h4 class="edu-degree">B.Tech in Computer Science & Engineering</h4>
+              <div class="edu-institution">Ganga Institute of Technology and Management, Delhi</div>
+              <p class="edu-notes">
+                Coursework focused on Computer Networks, Operating Systems, Database Management Systems, Data Structures, and Cyber Security fundamentals.
+              </p>
+              <div class="edu-badge-row">
+                <span class="badge-mini">Undergraduate Degree</span>
+                <span class="badge-mini">Delhi NCR</span>
+                <span class="badge-mini">Engineering</span>
+              </div>
+            </div>
+
+            <!-- 12th Grade -->
+            <div class="modern-edu-card">
+              <div class="edu-timeline">Senior Secondary (12th Standard)</div>
+              <h4 class="edu-degree">12th Standard (BSEB)</h4>
+              <div class="edu-institution">Bihar School Examination Board</div>
+              <div class="grade-pill">
+                <i class="fa-solid fa-award"></i>
+                <span>Score: <strong>66%</strong></span>
+              </div>
+            </div>
+
+            <!-- 10th Grade -->
+            <div class="modern-edu-card">
+              <div class="edu-timeline">Secondary School (10th Standard)</div>
+              <h4 class="edu-degree">10th Standard (CBSE)</h4>
+              <div class="edu-institution">Central Board of Secondary Education</div>
+              <div class="grade-pill">
+                <i class="fa-solid fa-award"></i>
+                <span>Score: <strong>62%</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Certifications & Skills Depth -->
+          <div class="edu-col">
+            <div class="col-heading">
+              <i class="fa-solid fa-certificate"></i>
+              <h3>Verified Certifications</h3>
+            </div>
+
+            <!-- GITAM Certification Card -->
+            <div class="modern-edu-card cert-card">
+              <div class="cert-status-badge"><i class="fa-solid fa-check"></i> VERIFIED</div>
+              <div class="edu-timeline">2026 Batch</div>
+              <h4 class="edu-degree">IoT, Machine Learning and Data Analytics</h4>
+              <div class="edu-institution">GITAM</div>
+              <p class="edu-notes">
+                In-depth specialization in Internet of Things (IoT) sensors, embedded data streaming, machine learning predictive models, and analytical data pipelines.
+              </p>
+              <div class="edu-badge-row">
+                <span class="badge-mini highlight">IoT Sensors</span>
+                <span class="badge-mini highlight">Machine Learning</span>
+                <span class="badge-mini highlight">Data Analytics</span>
+              </div>
+            </div>
+
+            <!-- Language Proficiency Breakdown Card -->
+            <div class="modern-edu-card">
+              <h4 class="edu-degree">Technical Languages</h4>
+              <p class="edu-notes" style="margin-bottom: 1.25rem;">Practical coding fluency</p>
+
+              <div class="lang-meter-list">
+                <div class="lang-item">
+                  <div class="lang-meta">
+                    <span>Python (OpenCV & Scripting)</span>
+                    <span class="val">90%</span>
+                  </div>
+                  <div class="track"><div class="fill" style="width: 90%;"></div></div>
+                </div>
+                <div class="lang-item">
+                  <div class="lang-meta">
+                    <span>C & C++ (Systems Programming)</span>
+                    <span class="val">80%</span>
+                  </div>
+                  <div class="track"><div class="fill" style="width: 80%;"></div></div>
+                </div>
+                <div class="lang-item">
+                  <div class="lang-meta">
+                    <span>SQL (Querying & Schemas)</span>
+                    <span class="val">85%</span>
+                  </div>
+                  <div class="track"><div class="fill" style="width: 85%;"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Readiness Badge -->
+            <div class="readiness-banner">
+              <div class="banner-icon"><i class="fa-solid fa-bolt"></i></div>
+              <div>
+                <h4>Open for Employment</h4>
+                <p>Seeking entry-level IT roles in Delhi NCR or Pan-India.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get in <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle">Interested in discussing job opportunities, internships, or IT projects? Send a direct message.</p>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Left: Direct Channels -->
+          <div class="contact-channels-col">
+            <!-- Email -->
+            <div class="contact-channel-card">
+              <div class="channel-icon blue"><i class="fa-solid fa-envelope"></i></div>
+              <div class="channel-body">
+                <span class="label">Email Address</span>
+                <a href="mailto:akash7491800@gmail.com" class="val">akash7491800@gmail.com</a>
+              </div>
+              <button class="copy-action-btn" data-copy="akash7491800@gmail.com" title="Copy Email">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-channel-card">
+              <div class="channel-icon emerald"><i class="fa-solid fa-phone"></i></div>
+              <div class="channel-body">
+                <span class="label">Phone Call</span>
+                <a href="tel:+917491800797" class="val">+91 7491800797</a>
+              </div>
+              <button class="copy-action-btn" data-copy="+917491800797" title="Copy Phone Number">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="contact-channel-card">
+              <div class="channel-icon green"><i class="fa-brands fa-whatsapp"></i></div>
+              <div class="channel-body">
+                <span class="label">WhatsApp</span>
+                <a href="https://wa.me/917491800797?text=Hello%20Akash,%20I%20would%20like%20to%20discuss%20an%20opportunity%20with%20you." target="_blank" rel="noopener" class="val">+91 7491800797</a>
+              </div>
+              <a href="https://wa.me/917491800797?text=Hello%20Akash,%20I%20would%20like%20to%20discuss%20an%20opportunity%20with%20you." target="_blank" rel="noopener" class="external-link-btn" title="Open WhatsApp">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-channel-card">
+              <div class="channel-icon amber"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="channel-body">
+                <span class="label">Location</span>
+                <span class="val">Delhi, India (Open to Relocation)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Message Form -->
+          <div class="contact-form-col">
+            <form class="modern-contact-form" id="contactForm">
+              <h3 class="form-title">Send a Direct Message</h3>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input type="email" id="email" required placeholder="john@example.com">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Opportunity Type</label>
+                <select id="subject">
+                  <option value="IT Operations / Support Role">IT Operations / Support Role</option>
+                  <option value="CCTV / Security Operations">CCTV / Security Operations</option>
+                  <option value="OpenCV / Python Project">OpenCV / Python Project</option>
+                  <option value="General Inquiry">General Inquiry</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" required placeholder="Write your message or job requirements here..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit" id="submitFormBtn">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+
+              <div class="form-status" id="formStatus"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CODE SNIPPET MODAL -->
+  <div class="modal-backdrop" id="codeModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="fa-brands fa-python"></i>
+          <span>gesture_analyzer_core.py — OpenCV Implementation</span>
+        </div>
+        <button class="modal-close" id="closeModalBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+<pre><code><span class="c-dim"># Hand Gesture Recognition System for CCTV Feeds</span>
+<span class="c-dim"># Built by Akash Kumar | B.Tech CSE</span>
+<span class="c-keyword">import</span> cv2
+<span class="c-keyword">import</span> numpy <span class="c-keyword">as</span> np
+
+<span class="c-keyword">def</span> <span class="c-func">analyze_cctv_frame</span>(frame):
+    <span class="c-dim"># 1. Grayscale & Gaussian Blur preprocessing</span>
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    blurred = cv2.GaussianBlur(gray, (<span class="c-num">35</span>, <span class="c-num">35</span>), <span class="c-num">0</span>)
+    
+    <span class="c-dim"># 2. Otsu inverted binary thresholding</span>
+    _, thresh = cv2.threshold(blurred, <span class="c-num">127</span>, <span class="c-num">255</span>, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+    
+    <span class="c-dim"># 3. Contour detection</span>
+    contours, _ = cv2.findContours(thresh.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
+    
+    <span class="c-keyword">if</span> len(contours) > <span class="c-num">0</span>:
+        max_c = max(contours, key=cv2.contourArea)
+        hull = cv2.convexHull(max_c, returnPoints=<span class="c-keyword">False</span>)
+        defects = cv2.convexityDefects(max_c, hull)
+        
+        <span class="c-keyword">if</span> defects <span class="c-keyword">is not None</span>:
+            finger_count = <span class="c-num">0</span>
+            <span class="c-keyword">for</span> i <span class="c-keyword">in</span> range(defects.shape[<span class="c-num">0</span>]):
+                s, e, f, _ = defects[i, <span class="c-num">0</span>]
+                start, end, far = tuple(max_c[s][<span class="c-num">0</span>]), tuple(max_c[e][<span class="c-num">0</span>]), tuple(max_c[f][<span class="c-num">0</span>])
+                
+                <span class="c-dim"># Cosine rule for angle calculation</span>
+                a = np.linalg.norm(np.array(end) - np.array(start))
+                b = np.linalg.norm(np.array(far) - np.array(start))
+                c = np.linalg.norm(np.array(end) - np.array(far))
+                angle = np.arccos((b**<span class="c-num">2</span> + c**<span class="c-num">2</span> - a**<span class="c-num">2</span>) / (<span class="c-num">2</span> * b * c))
+                
+                <span class="c-keyword">if</span> angle <= np.pi / <span class="c-num">2</span>:  <span class="c-dim"># Finger defect detected</span>
+                    finger_count += <span class="c-num">1</span>
+            
+            <span class="c-keyword">return</span> finger_count + <span class="c-num">1</span> <span class="c-dim"># Classified gesture</span>
+    <span class="c-keyword">return</span> <span class="c-num">0</span>
+</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="profile.jpg?v=2" alt="Akash Kumar" class="footer-avatar-img">
+          <span class="logo-text">Akash Kumar</span>
+        </div>
+        <p class="footer-desc">B.Tech Computer Science & Engineering • IT & Cyber Surveillance Specialist</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Akash Kumar. All rights reserved. • Delhi, India</span>
+        <span class="footer-status"><i class="fa-solid fa-circle"></i> Available for Immediate Hiring</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- EXECUTIVE RESUME PREVIEW & PDF PRINT MODAL -->
+  <div class="resume-modal-backdrop" id="resumeModal">
+    <div class="resume-modal-window">
+      <div class="resume-modal-header">
+        <div class="modal-header-left">
+          <i class="fa-solid fa-file-pdf"></i>
+          <span>Executive Resume — Akash Kumar</span>
+        </div>
+        <div class="modal-header-actions">
+          <button class="btn btn-primary btn-direct-download" id="downloadPdfDirectBtn">
+            <i class="fa-solid fa-file-arrow-down"></i>
+            <span>Download PDF</span>
+          </button>
+          <button class="btn btn-secondary btn-print-now" id="printResumeNowBtn">
+            <i class="fa-solid fa-print"></i>
+            <span>Print via Browser</span>
+          </button>
+          <button class="modal-close-btn" id="closeResumeModalBtn" aria-label="Close resume modal">&times;</button>
+        </div>
+      </div>
+      
+      <div class="resume-modal-body">
+        <!-- THE PRINTABLE RESUME SHEET -->
+        <div class="resume-sheet" id="resumePrintDoc">
+          <!-- Resume Header -->
+          <div class="r-header">
+            <div class="r-header-text">
+              <h1 class="r-name">AKASH KUMAR</h1>
+              <p class="r-subtitle">B.Tech (Computer Science & Engineering) • IT Systems & CCTV Surveillance Specialist</p>
+              <div class="r-contact-row">
+                <span><i class="fa-solid fa-location-dot"></i> Delhi, India</span>
+                <span class="r-dot">•</span>
+                <span><i class="fa-solid fa-phone"></i> +91 7491800797</span>
+                <span class="r-dot">•</span>
+                <span><i class="fa-solid fa-envelope"></i> akash7491800@gmail.com</span>
+              </div>
+            </div>
+            <div class="r-header-photo">
+              <img src="profile.jpg?v=2" alt="Akash Kumar" class="r-photo-img">
+            </div>
+          </div>
+
+          <!-- Section: Career Objective -->
+          <div class="r-section">
+            <h2 class="r-sec-title">CAREER OBJECTIVE</h2>
+            <div class="r-divider"></div>
+            <p class="r-text">
+              Motivated B.Tech (Computer Science & Engineering) student with hands-on IT experience and a working foundation in cyber security and server management. Seeking an entry-level IT role to apply technical knowledge, support business operations, and grow within a dynamic organization.
+            </p>
+          </div>
+
+          <!-- Section: Technical Skills -->
+          <div class="r-section">
+            <h2 class="r-sec-title">TECHNICAL SKILLS</h2>
+            <div class="r-divider"></div>
+            <div class="r-skills-grid">
+              <div class="r-skill-item"><strong>IT & Systems:</strong> Server Management, Hardware & Network Troubleshooting, PoE/LAN Diagnostics</div>
+              <div class="r-skill-item"><strong>Surveillance & Security:</strong> Cyber Security, CCTV Monitoring, DVR/NVR Cluster Administration, Shift Incident Auditing</div>
+              <div class="r-skill-item"><strong>Programming & AI:</strong> Python, Image Processing (OpenCV), C, C++, SQL Database Querying</div>
+            </div>
+          </div>
+
+          <!-- Section: Professional Experience -->
+          <div class="r-section">
+            <h2 class="r-sec-title">PROFESSIONAL EXPERIENCE</h2>
+            <div class="r-divider"></div>
+            <div class="r-job">
+              <div class="r-job-head">
+                <div class="r-job-role"><strong>CRO (CCTV Control Room Operator)</strong> — Myntra</div>
+                <div class="r-job-date">June 2025 – Nov 2025 | Bilaspur FC</div>
+              </div>
+              <ul class="r-bullets">
+                <li>Monitored live CCTV feeds across the fulfillment center to ensure security, perimeter safety, and smooth logistical operations.</li>
+                <li>Reviewed recorded footage and flagged irregular activity, loss prevention incidents, or safety violations to management.</li>
+                <li>Maintained DVR/NVR systems and ensured all camera feeds remained active, troubleshooting network and hardware downtime promptly.</li>
+                <li>Maintained shift logs, equipment checklists, and formal incident reports adhering strictly to compliance guidelines.</li>
+                <li>Coordinated with on-ground marshals, quick response teams (QRT), and warehouse supervisors to resolve alerts quickly.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Section: Projects -->
+          <div class="r-section">
+            <h2 class="r-sec-title">TECHNICAL PROJECTS</h2>
+            <div class="r-divider"></div>
+            <div class="r-project">
+              <div class="r-job-head">
+                <div class="r-job-role"><strong>Hand Gesture Analyzer (CCTV Footage)</strong> — <em>Python, OpenCV, NumPy</em></div>
+                <div class="r-job-date">Computer Vision Project</div>
+              </div>
+              <ul class="r-bullets">
+                <li>Built a real-time gesture recognition system that ingests CCTV surveillance video feeds to detect and classify human hand signals.</li>
+                <li>Applied OpenCV image processing techniques including Gaussian blur, Otsu thresholding, contour extraction, and convexity defect analysis.</li>
+                <li>Engineered Python classification algorithms capable of triggering instant automated security notifications upon detecting distress gestures.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Section: Education -->
+          <div class="r-section">
+            <h2 class="r-sec-title">EDUCATION</h2>
+            <div class="r-divider"></div>
+            <div class="r-edu-row">
+              <div><strong>B.Tech, Computer Science & Engineering</strong> — Ganga Institute of Technology and Management, Delhi</div>
+              <div class="r-date">Sept 2024 – Present</div>
+            </div>
+            <div class="r-edu-row">
+              <div><strong>12th Standard (Senior Secondary)</strong> — Bihar School Examination Board (BSEB)</div>
+              <div class="r-date">Score: 66%</div>
+            </div>
+            <div class="r-edu-row">
+              <div><strong>10th Standard (Secondary School)</strong> — Central Board of Secondary Education (CBSE)</div>
+              <div class="r-date">Score: 62%</div>
+            </div>
+          </div>
+
+          <!-- Section: Certifications & Languages -->
+          <div class="r-section">
+            <h2 class="r-sec-title">CERTIFICATIONS & LANGUAGES</h2>
+            <div class="r-divider"></div>
+            <div class="r-cert-row">
+              <div><strong>IoT, Machine Learning and Data Analytics</strong> — GITAM (2026 Batch)</div>
+            </div>
+            <div class="r-lang-row">
+              <strong>Known Languages:</strong> Python, C, C++, SQL (English, Hindi)
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-area" id="toastArea"></div>
+
+  <!-- html2pdf for direct client-side PDF downloads -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js?v=3"></script>
+</body>
+</html>
